@@ -1,0 +1,47 @@
+.dialog__theme-dark {
+  background: $dialog-background-1;
+  border: $dialog-border-1;
+}
+
+.dialog__theme-light {
+  background: $dialog-background-2;
+  border: $dialog-border-2;
+}
+
+.dialog {
+  position: relative;
+  width: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  
+
+  &-header {
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: px2rem(8);
+  }
+
+  &-content {
+    flex: 1;
+    padding: 0 px2rem(8) px2rem(8);
+    overflow: hidden;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    font-size: px2rem(16);
+    color: $dialog-title-color;
+  }
+
+  &-close-icon {
+    width: px2rem(18);
+    height: px2rem(18);
+    cursor: pointer;
+  }
+}

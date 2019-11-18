@@ -7,7 +7,7 @@ export default {
 };
 
 export const 默认 = () => (
-  <ZaIcon path="/assets/zoom-btns/qie tu 138 (1).png" />
+  <ZaIcon path="/assets/zoom-btns/qie tu 138 (1).png" width="80" height="80" />
 );
 
 export const 可点击 = () => (

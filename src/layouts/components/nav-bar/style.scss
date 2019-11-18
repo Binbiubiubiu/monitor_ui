@@ -1,0 +1,62 @@
+.nav__wrapper {
+  position: absolute;
+  bottom: px2rem(31);
+  left: 50vw;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  color: $text-normal-color;
+
+  @mixin bgImage($img) {
+    background: url("/assets/nav-bar/#{$img}") no-repeat center/ 100% 100%;
+  }
+
+  .nav__item {
+    display: inline-block;
+    // width: px2rem(134);
+    // height: px2rem(46);
+    padding: px2rem(12) px2rem(26);
+    // line-height: px2rem(46);
+    font-size: px2rem(18);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .nav-ll {
+    @include bgImage("Q027.png");
+    &__active {
+      @include bgImage("Q034.png");
+    }
+  }
+
+  .nav-l {
+    @include bgImage("Q029.png");
+    &__active {
+      @include bgImage("Q036.png");
+    }
+  }
+
+  .nav-mid {
+    margin: 0 px2rem(14);
+    @include bgImage("Q026.png");
+    &__active {
+      margin: 0 px2rem(14);
+      @include bgImage("Q033.png");
+    }
+  }
+
+  .nav-r {
+    @include bgImage("Q030.png");
+    &__active {
+      @include bgImage("Q037.png");
+    }
+  }
+
+  .nav-rr {
+    @include bgImage("Q031.png");
+    &__active {
+      @include bgImage("Q038.png");
+    }
+  }
+}

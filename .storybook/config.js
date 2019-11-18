@@ -4,6 +4,7 @@ import { withInfo } from "@storybook/addon-info";
 import { withA11y } from "@storybook/addon-a11y";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import centered from "@storybook/addon-centered/react";
+import { themes } from "@storybook/theming";
 
 const newViewports = {
   //   kindleFire2: {
@@ -37,7 +38,8 @@ addParameters({
     panelPosition: "bottom",
     hierarchySeparator: /\./,
     // hierarchyRootSeparator: /\|/,
-    enableShortcuts: true
+    enableShortcuts: true,
+    theme: themes.dark
     // theme: create({
     //   base: 'light',
     //   brandTitle: 'CRA Kitchen Sink',
@@ -48,7 +50,8 @@ addParameters({
     //   a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, { numeric: true }),
   },
   backgrounds: [
-    { name: "normal", value: "#ffffff", default: true },
+    { name: "dark", value: "#242424", default: true },
+    { name: "normal", value: "#ffffff" },
     { name: "twitter", value: "#00aced" },
     { name: "facebook", value: "#3b5998" }
   ],

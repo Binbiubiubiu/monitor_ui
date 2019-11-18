@@ -66,3 +66,7 @@ declare module "*.module.sass" {
 }
 
 declare module "video.js";
+
+declare module "AMap" {
+  export default Window.AMap;
+}

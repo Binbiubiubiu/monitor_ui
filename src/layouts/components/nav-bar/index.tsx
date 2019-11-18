@@ -1,20 +1,61 @@
-import React from "react";
+import React, { FC } from "react";
 import { NavLink } from "react-router-dom";
 import "./style.scss";
 
-export default function Nav() {
+export const NavBar: FC = () => {
   return (
-    <nav>
-      <NavLink to="/nav-1" activeClassName="selected">
-        nav-1
+    <nav className="nav__wrapper">
+      <NavLink
+        to="/nav-1"
+        className="nav__item nav-ll"
+        activeClassName="nav-ll__active"
+      >
+        安防监控
       </NavLink>
-      <NavLink to="/nav-2" activeClassName="selected">
-        nav-2
+      <NavLink
+        to="/nav-2"
+        className="nav__item nav-ll"
+        activeClassName="nav-ll__active"
+      >
+        人员管理
+      </NavLink>
+      <NavLink
+        to="/nav-3"
+        className="nav__item nav-l"
+        activeClassName="nav-l__active"
+      >
+        车辆管理
+      </NavLink>
+      <NavLink
+        to="/nav-4"
+        className="nav__item nav-mid"
+        activeClassName="nav-mid__active"
+      >
+        智安小区
+      </NavLink>
+      <NavLink
+        to="/nav-5"
+        className="nav__item nav-r"
+        activeClassName="nav-r__active"
+      >
+        智慧消防
+      </NavLink>
+      <NavLink
+        to="/nav-9"
+        className="nav__item nav-rr"
+        activeClassName="nav-rr__active"
+      >
+        智慧环境
+      </NavLink>
+      <NavLink
+        to="/nav-10"
+        className="nav__item nav-rr"
+        activeClassName="nav-rr__active"
+      >
+        智慧垃圾
       </NavLink>
     </nav>
   );
-}
+};
 
-// const NavItem = (props: any) => {
-//   return NavLink;
-// };
+export default NavBar;

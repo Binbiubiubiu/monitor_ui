@@ -1,0 +1,19 @@
+.title-banner__wrapper {
+  position: absolute;
+  top: px2rem(24);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: auto;
+  min-width: px2rem(360);
+  padding: px2rem(18) px2rem(30);
+  background: url("/assets/title-banner/Q005.png") no-repeat center center /
+    100% 100%;
+
+  .title-banner__text {
+    font-size: px2rem(30);
+    letter-spacing: px2rem(8);
+    color: $text-title-color;
+    text-align: center;
+  }
+}
