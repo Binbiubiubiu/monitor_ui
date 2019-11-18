@@ -1,0 +1,107 @@
+.login__bg {
+    position       : relative;
+    width          : 100vw;
+    height         : 100vh;
+    background     : url("./img/Q001.jpg") no-repeat center center / 100% 100%;
+    background-size: cover;
+
+}
+
+
+.websiteTitle {
+    color         : #fff;
+    text-align    : center;
+    font-size     : px2rem(107);
+    letter-spacing: px2rem(9);
+    font-family   : FZZZHUNHJW--GB1-0;
+    margin        : 0 0 px2rem(134);
+}
+
+.login__form_wrapper {
+    position: absolute;
+    top     : px2rem(142);
+    left    : 0;
+    right   : 0;
+
+    .login__form {
+        width : px2rem(355);
+        height: px2rem(284);
+        background-image: linear-gradient(0deg,
+                #124398 7%,
+                #1a56bd 45%,
+                #2268e2 100%);
+        box-shadow: 0vw 0vw 1vw 0vw rgba(183, 15, 134, 0.5);
+        border    : solid 1px #00fff6;
+
+        box-sizing: border-box;
+        margin    : 0 auto;
+        padding   : px2rem(24);
+    }
+}
+
+
+
+
+.input_wrapper {
+    display         : flex;
+    align-items     : center;
+    height          : px2rem(60);
+    padding         : 0 px2rem(23);
+    background-color: #fff;
+    margin-bottom   : px2rem(6);
+    box-sizing      : border-box;
+
+    input {
+        width     : 100%;
+        border    : none;
+        outline   : none;
+        font-size : px2rem(16);
+        flex      : 1;
+        height    : px2rem(40);
+        appearance: none;
+    }
+
+    input::-webkit-input-placeholder {
+        color      : #C4C4C4;
+        font-weight: bold;
+    }
+
+    input:-moz-placeholder {
+        color      : #C4C4C4;
+        font-weight: bold;
+    }
+
+    input::-moz-placeholder {
+        color      : #C4C4C4;
+        font-weight: bold;
+    }
+
+    input:-ms-input-placeholder {
+        color      : #C4C4C4;
+        font-weight: bold;
+    }
+
+    .input_icon {
+        width       : px2rem(26);
+        height      : auto;
+        margin-right: px2rem(23);
+    }
+}
+
+
+.login__btn {
+    width     : 100%;
+    height    : px2rem(58);
+    margin-top: px2rem(42);
+    background-image: linear-gradient(90deg,
+            #28D4CD 0%,
+            #29CC39 100%),
+        linear-gradient(#ff6000,
+            #ff6000);
+    background-blend-mode: normal,
+        normal;
+    border: none;
+
+    font-size: px2rem(21);
+    color    : #ffffff;
+}

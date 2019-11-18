@@ -1,0 +1,46 @@
+$fade-direction: left, right, top, bottom;
+$fade-distance: 30px;
+
+@each $c in $fade-direction {
+  .fade-#{$c}-enter-active,
+  .fade-#{$c}-leave-active {
+    transition: all 0.76s ease-in-out;
+  }
+
+  .fade-#{$c}-enter,
+  .fade-#{$c}-leave-to {
+    position: relative;
+    opacity: 0;
+
+    @if $c == left {
+      left: -$fade-distance;
+    } @else if $c == right {
+      left: $fade-distance;
+    } @else if $c == top {
+      top: -$fade-distance;
+    } @else if $c == bottom {
+      top: $fade-distance;
+    }
+  }
+
+  .fade-#{$c}-enter-to,
+  .fade-#{$c}-leave {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes fade-loading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,69 @@
+.text-ellipsis {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@each $item, $i in (l: left, t: top, r: right, b: bottom) {
+  .m-#{$i}-8 {
+    margin-#{$item}: $margin-normal;
+  }
+
+  .m-#{$i}-10 {
+    margin-#{$item}: $margin-big;
+  }
+}
+
+// .m-r-8 {
+//   margin-right: 8px;
+// }
+
+// .m-r-10 {
+//   margin-right: 10px;
+// }
+
+// .m-l-8 {
+//   margin-left: 8px;
+// }
+
+// .m-l-10 {
+//   margin-left: 10px;
+// }
+
+// .m-t-10 {
+//   margin-top: 10px;
+// }
+
+// .m-b-10 {
+//   margin-bottom: 10px;
+// }
+
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+.col-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.expand {
+  flex: auto;
+}
+/*****************  float 工具  ******************/
+.f-r {
+  float: right;
+}
+
+.f-l {
+  float: left;
+}
+
+// .clear-fix ::after {
+//   content: '';
+//   display: table;
+//   clear: both;
+// }

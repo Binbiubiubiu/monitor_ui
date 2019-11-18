@@ -1,0 +1,69 @@
+/*****************  tags  ******************/
+$za-tag-primary-bg: #3866d3;
+$za-tag-success-bg: #28a80a;
+$za-tag-disabled-bg: #999;
+$za-tag-danger-bg: #fe07ae;
+$za-tag-warning-bg: #b46a2a;
+
+$za-tag-bg-1: #568b39;
+$za-tag-bg-2: #907f2a;
+$za-tag-bg-3: #207d86;
+
+$za-tag-text-color: #fff;
+$za-tag-font-size: px2rem(14);
+
+.za-tag {
+  display: inline-block;
+  color: $za-tag-text-color;
+  background-color: $za-tag-success-bg;
+  padding: px2rem(10) px2rem(16);
+
+  font-size: $za-tag-font-size;
+  white-space: nowrap;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.za-tag__radius {
+  border-radius: px2rem(24);
+}
+// 正常
+.za-tag__ok {
+  padding-left: px2rem(44);
+  background: $za-tag-success-bg url("/assets/za-tag-icons/tick.png") no-repeat
+    left px2rem(14) center / px2rem(20) px2rem(16);
+}
+
+// 异常
+.za-tag__error {
+  padding-left: px2rem(44);
+  background: $za-tag-danger-bg url("/assets/za-tag-icons/fork.png") no-repeat
+    left px2rem(14) center / px2rem(16) px2rem(16);
+}
+
+// 隐患
+.za-tag__danger {
+  background: $za-tag-danger-bg;
+}
+
+// 警告
+.za-tag__warning {
+  background: $za-tag-warning-bg;
+}
+
+// 禁用
+.za-tag__disabled {
+  background: $za-tag-disabled-bg;
+}
+// 在线
+.za-tag__online {
+  padding-left: px2rem(44);
+  background: $za-tag-success-bg url("/assets/za-tag-icons/wifi_online.jpg")
+    no-repeat left px2rem(14) center / px2rem(22) px2rem(16);
+}
+// 离线
+.za-tag__outline {
+  padding-left: px2rem(44);
+  background: $za-tag-disabled-bg url("/assets/za-tag-icons/wifi_outline.jpg")
+    no-repeat left px2rem(14) center / px2rem(22) px2rem(16);
+}

@@ -1,0 +1,25 @@
+@import "./colors.scss";
+
+$margin-normal: px2rem(8);
+$margin-big: px2rem(10);
+
+/*****************  text  ******************/
+$text-normal-color: #fff;
+$text-title-color: #47f3e5;
+
+$text-normal-size: px2rem(14);
+
+/*****************  dialog  ******************/
+$dialog-background-1: #142134;
+$dialog-border-1: 1px solid #2ba4a5;
+$dialog-title-color: #0eff24;
+
+$dialog-background-2: #132f61;
+$dialog-border-2: 1px solid #1f4cc4;
+
+/*****************  select  ******************/
+$custom-select-text-color: #1b57bf;
+$custom-select-bg: #fff;
+$custom-select-border: 1px solid #0059ff;
+
+
