@@ -32,6 +32,10 @@ module.exports = async ({ config, mode }) => {
     }
   });
 
+  config.externals = {
+    AMap: "window.AMap"
+  };
+
   // config.module.rules.push({
   //   test: /\.stories\.tsx?$/,
   //   loaders: [

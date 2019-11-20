@@ -6,7 +6,9 @@ export default class Login extends Component {
     return (
       <div className={styles.login__bg}>
         <section className={styles.login__form_wrapper}>
-          <h1 className={styles.websiteTitle}>12</h1>
+          <h1 className={styles.websiteTitle}>
+            {process.env.REACT_APP_WEBSITE_NAME}
+          </h1>
           <form className={styles.login__form} onSubmit={undefined}>
             <div className={styles.input_wrapper}>
               <label>

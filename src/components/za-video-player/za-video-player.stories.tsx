@@ -1,8 +1,8 @@
 import React from "react";
-import ZaVideoPlayer from ".";
+import ZaVideoPlayer from "./za-video-player";
 
 export default {
-  title: "视频播放器"
+  title: "公共组件|视频播放器"
 };
 
 export const 默认 = () => (

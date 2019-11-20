@@ -12,7 +12,7 @@ const defaultProps = {
   height: 240
 };
 
-type ZaVideoPlayerProps = {
+export interface ZaVideoPlayerProps {
   /**
    * 视频播放路径
    */
@@ -32,7 +32,7 @@ type ZaVideoPlayerProps = {
    */
   config?: object;
   [props: string]: any;
-};
+}
 
 type ZaVideoPlayerState = {
   isVaildURL: boolean;
@@ -42,6 +42,8 @@ type ZaVideoPlayerState = {
 class ZaVideoPlayer extends Component<ZaVideoPlayerProps, ZaVideoPlayerState> {
   player: any;
   videoNode: React.RefObject<HTMLVideoElement>;
+
+  static defaultProps = defaultProps;
 
   constructor(props: Readonly<ZaVideoPlayerProps>) {
     super(props);
@@ -102,7 +104,7 @@ class ZaVideoPlayer extends Component<ZaVideoPlayerProps, ZaVideoPlayerState> {
   }
 
   render() {
-    const { width, height } = shallowMerge(defaultProps, this.props);
+    const { width, height } = this.props;
     const { error } = this.state;
 
     return (

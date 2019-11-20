@@ -1,9 +1,9 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import ZaButton from ".";
+import ZaButton from "./za-button";
 
 export default {
-  title: "按钮"
+  title: "公共组件|按钮"
 };
 
 export const 默认 = () => (

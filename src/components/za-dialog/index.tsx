@@ -1,12 +1,5 @@
-import React, { FC } from "react";
-import "./style.scss";
+import ZaDialog from "./za-dialog";
 
-type ZaDialogProps = {};
-
-export const ZaDialog: FC<ZaDialogProps> = props => {
-  const { children } = props;
-
-  return <section className="dialog__theme-dark">{children}</section>;
-};
+export { ZaDialogProps } from "./za-dialog";
 
 export default ZaDialog;

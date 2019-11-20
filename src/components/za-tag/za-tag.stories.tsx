@@ -1,8 +1,8 @@
 import React from "react";
-import ZaTag from ".";
+import ZaTag from "./za-tag";
 
 export default {
-  title: "标签"
+  title: "公共组件|标签"
 };
 
 export const 默认 = () => <ZaTag>默认标签</ZaTag>;

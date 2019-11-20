@@ -5,39 +5,15 @@
   text-overflow: ellipsis;
 }
 
-@each $item, $i in (l: left, t: top, r: right, b: bottom) {
-  .m-#{$i}-8 {
+@each $key, $item in (l: left, t: top, r: right, b: bottom) {
+  .m-#{$key}-8 {
     margin-#{$item}: $margin-normal;
   }
 
-  .m-#{$i}-10 {
+  .m-#{$key}-10 {
     margin-#{$item}: $margin-big;
   }
 }
-
-// .m-r-8 {
-//   margin-right: 8px;
-// }
-
-// .m-r-10 {
-//   margin-right: 10px;
-// }
-
-// .m-l-8 {
-//   margin-left: 8px;
-// }
-
-// .m-l-10 {
-//   margin-left: 10px;
-// }
-
-// .m-t-10 {
-//   margin-top: 10px;
-// }
-
-// .m-b-10 {
-//   margin-bottom: 10px;
-// }
 
 .v-center {
   display: flex;
