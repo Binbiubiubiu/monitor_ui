@@ -1,40 +1,43 @@
 @import "./colors.scss";
 
-$margin-normal: px2rem(8);
-$margin-big: px2rem(10);
+$blank-space-normal: px2rem(8);
+$blank-space-big   : px2rem(10);
 
 /*****************  text  ******************/
 $text-normal-color: #fff;
-$text-title-color: #47f3e5;
+$text-title-color : #47f3e5;
 
 $text-normal-size: px2rem(14);
 
+/*****************  number-card  ******************/
+$number-card-text-color: #d4f9ff;
+
 /*****************  button  ******************/
-$za-btn-text-color: #ffffff;
-$za-btn-primary-bg: #3e81f5;
-$za-btn-actived-bg: #28a80a;
+$za-btn-text-color : #ffffff;
+$za-btn-primary-bg : #3e81f5;
+$za-btn-actived-bg : #28a80a;
 $za-btn-disabled-bg: #999;
-$za-btn-danger-bg: #fe07ae;
+$za-btn-danger-bg  : #fe07ae;
 
 /*****************  dialog  ******************/
-$dialog-background-1: #142134;
-$dialog-border-1: 1px solid #2ba4a5;
-$dialog-title-color: #0eff24;
+$dialog-background-1: rgba(20, 33, 52, 0.7);
+$dialog-border-1    : 1px solid #2ba4a5;
+$dialog-title-color : #0eff24;
 
-$dialog-background-2: #132f61;
-$dialog-border-2: 1px solid #1f4cc4;
+$dialog-background-2: rgba(19, 47, 97, 0.7);
+$dialog-border-2    : 1px solid #1f4cc4;
 
 /*****************  select  ******************/
 $custom-select-text-color: #1b57bf;
-$custom-select-bg: #fff;
-$custom-select-border: 1px solid #0059ff;
+$custom-select-bg        : #fff;
+$custom-select-border    : 1px solid #0059ff;
 
 /*****************  tags  ******************/
-$za-tag-primary-bg: #3866d3;
-$za-tag-success-bg: #28a80a;
+$za-tag-primary-bg : #3866d3;
+$za-tag-success-bg : #28a80a;
 $za-tag-disabled-bg: #999;
-$za-tag-danger-bg: #fe07ae;
-$za-tag-warning-bg: #b46a2a;
+$za-tag-danger-bg  : #fe07ae;
+$za-tag-warning-bg : #b46a2a;
 
 $za-tag-bg-1: #568b39;
 $za-tag-bg-2: #907f2a;

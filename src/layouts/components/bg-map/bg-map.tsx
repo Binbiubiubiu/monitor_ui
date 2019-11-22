@@ -6,9 +6,7 @@ export interface BgMapProps {
   [props: string]: any;
 }
 
-
 export class BgMap extends Component<BgMapProps> {
- 
   bgMap: any;
 
   render() {
@@ -25,7 +23,7 @@ export class BgMap extends Component<BgMapProps> {
     this._initMap();
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     this._destoryMap();
   }
 

@@ -4,7 +4,7 @@ import loadable from "@loadable/component";
 import Layout from "../layouts";
 import Login from "../pages/login";
 
-const Loading = (props: any) => <div>loading</div>;
+const Loading = (props: any) => <div></div>;
 
 export const routeConfig = [
   {

@@ -2,9 +2,9 @@ import React, { FC } from "react";
 import { NavLink } from "react-router-dom";
 import "./style.scss";
 
-export const NavBar: FC = () => {
+export const NavBar: FC = props => {
   return (
-    <nav className="nav__wrapper">
+    <nav className="nav__wrapper" {...props}>
       <NavLink
         to="/nav-1"
         className="nav__item nav-ll"

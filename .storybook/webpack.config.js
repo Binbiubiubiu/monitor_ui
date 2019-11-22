@@ -28,7 +28,10 @@ module.exports = async ({ config, mode }) => {
   config.module.rules[4].use.push({
     loader: "style-resources-loader",
     options: {
-      patterns: [path.resolve(__dirname, "..", "src/global.scss")]
+      patterns: [
+        path.resolve(__dirname, "..", "src/styles/functions/index.scss"),
+        path.resolve(__dirname, "..", "src/styles/variables/index.scss")
+      ]
     }
   });
 

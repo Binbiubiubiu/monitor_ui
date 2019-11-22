@@ -5,22 +5,23 @@ import { withA11y } from "@storybook/addon-a11y";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import centered from "@storybook/addon-centered/react";
 import { themes } from "@storybook/theming";
+import "@/global.scss";
 
 const newViewports = {
-  //   kindleFire2: {
-  //     name: 'Kindle Fire 2',
-  //     styles: {
-  //       width: '600px',
-  //       height: '963px',
-  //     },
-  //   },
-  //   kindleFireHD: {
-  //     name: 'Kindle Fire HD',
-  //     styles: {
-  //       width: '533px',
-  //       height: '801px',
-  //     },
-  //   },
+  case1: {
+    name: "1920*1080",
+    styles: {
+      width: "1920px",
+      height: "1080px"
+    }
+  },
+  case2: {
+    name: "1366*768",
+    styles: {
+      width: "1366px",
+      height: "768px"
+    }
+  }
 };
 
 addDecorator(
@@ -57,7 +58,7 @@ addParameters({
   ],
   viewport: {
     viewports: {
-      ...INITIAL_VIEWPORTS,
+      // ...INITIAL_VIEWPORTS,
       ...newViewports
     }
   }
