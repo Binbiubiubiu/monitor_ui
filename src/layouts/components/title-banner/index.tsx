@@ -1,9 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import "./style.scss";
 
-const TitleBanner = () => {
+export interface TitleBannerProps {
+  [props: string]: any;
+}
+
+const TitleBanner: FC<TitleBannerProps> = props => {
   return (
-    <section className="title-banner__wrapper">
+    <section className="title-banner__wrapper" {...props}>
       <h1 className="title-banner__text">
         {process.env.REACT_APP_WEBSITE_NAME}
       </h1>

@@ -1,13 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { ConnectedRouter } from "connected-react-router";
 import { Provider } from "react-redux";
-import { store } from "./models/store";
+import configureStore, { history } from "./models/configureStore";
 import { renderRoutes, routeConfig } from "./routes";
+import "./global.scss";
+
+const store = configureStore({});
 
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <Router>{renderRoutes(routeConfig)}</Router>
+      <ConnectedRouter history={history}>
+        {renderRoutes(routeConfig)}
+      </ConnectedRouter>
     </Provider>
   );
 };

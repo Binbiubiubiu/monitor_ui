@@ -40,11 +40,11 @@
   }
 
   .nav-mid {
-    margin: 0 px2rem(14);
+    margin: 0 px2rem(5);
     @include bgImage("Q026.png");
 
     &__active {
-      margin: 0 px2rem(14);
+      margin: 0 px2rem(5);
       @include bgImage("Q033.png");
     }
   }

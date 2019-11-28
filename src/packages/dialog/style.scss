@@ -1,0 +1,29 @@
+.#{$prefixCls}dialog__theme-dark {
+  background: $dialog-background-1;
+  border    : $dialog-border-1;
+}
+
+.#{$prefixCls}dialog__theme-light {
+  background: $dialog-background-2;
+  border    : $dialog-border-2;
+}
+
+.#{$prefixCls}dialog__header {
+  display: flex;
+  padding: $blank-space-normal;
+
+  .#{$prefixCls}dialog__title {
+    font-size: $text-normal-size;
+    color    : $dialog-title-color;
+  }
+
+  .#{$prefixCls}dialog__expand {
+    flex       : auto;
+    line-height: 0;
+    text-align : right;
+
+    &>* {
+      margin-right: $blank-space-normal;
+    }
+  }
+}
