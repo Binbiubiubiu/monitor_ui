@@ -1,6 +1,6 @@
 import React, { FC, MouseEventHandler } from "react";
 import classNames from "classnames";
-import "./style.scss";
+import "./style";
 
 const defaultProps = {
   up: false,

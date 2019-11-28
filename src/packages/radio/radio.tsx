@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import classnames from "classnames";
-import "./style.scss";
+import "./style";
 import RadioGroup, { RadioGroupProps } from "./radio-group";
 
 const defaultProps = {

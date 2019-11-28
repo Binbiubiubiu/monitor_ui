@@ -7,7 +7,7 @@ import {
   TableRowRenderer
 } from "react-virtualized";
 import "react-virtualized/styles.css";
-import "./style.scss";
+import "./style";
 import Loading from "../loading";
 
 const defaultProps = {};

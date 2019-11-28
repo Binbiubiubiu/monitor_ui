@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import "./style.scss";
+import "./style";
 import { shallowMerge } from "@/utils/data";
-import defaultVideoPlayerConfig from "./default-config";
-import { analyzeTypeOfVideo, isVaildURL } from "./util";
+import defaultVideoPlayerConfig from "./utils/default-config";
+import { analyzeTypeOfVideo, isVaildURL } from "./utils";
 import { px2rem } from "@/utils/viewports";
 
 const defaultProps = {

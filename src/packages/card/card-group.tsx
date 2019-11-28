@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import "./style.scss";
 
 const defaultProps = {
   gap: 10

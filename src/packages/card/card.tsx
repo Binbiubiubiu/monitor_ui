@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, isValidElement } from "react";
-import "./style.scss";
+import "./style";
 import CardGroup from "./card-group";
 import { CardGroupProps } from "./card-group";
 

@@ -1,6 +1,6 @@
 import React, { FC, useMemo, MouseEventHandler } from "react";
 import classnames from "classnames";
-import "./style.scss";
+import "./style";
 import { px2rem } from "@/utils/viewports";
 
 const defaultProps = {

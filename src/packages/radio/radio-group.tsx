@@ -1,5 +1,6 @@
 import React, { FC, useState, useEffect } from "react";
 import { randomString } from "@/utils/viewports";
+import "./style";
 
 export interface RadioGroupProps {
   /** 单选组选中的值 */

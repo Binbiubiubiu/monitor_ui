@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import "./style";
 
 export interface SelectProps {
   [props: string]: any;

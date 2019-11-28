@@ -1,6 +1,6 @@
 import React, { FC, ReactNode, MouseEventHandler } from "react";
 import classnames from "classnames";
-import "./style.scss";
+import "./style";
 import Icon from "../icon";
 
 const defaultProps = {
