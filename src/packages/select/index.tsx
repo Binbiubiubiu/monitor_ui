@@ -1,5 +1,5 @@
-import Select, { SelectProps as IProps } from "./select";
+import Select from "./select";
 
-export type SelectProps = IProps;
+export { Option, OptGroup } from "rc-select";
 
 export default Select;

@@ -1,0 +1,23 @@
+.#{$prefixCls}inline-card {
+    display: flex;
+    color  : $inline-card-text-color;
+
+    .#{$prefixCls}inline-card__item {
+        flex        : 1;
+        font-size   : px2rem(26px);
+        text-align  : center;
+        border-right: 1px solid $inline-card-text-color;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        .#{$prefixCls}inline-card__title {
+            font-size: px2rem(14);
+        }
+
+        .led-num {
+            font-size: px2rem(26);
+        }
+    }
+}

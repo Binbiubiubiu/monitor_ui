@@ -11,16 +11,17 @@ export interface RadioGroupProps {
 }
 
 export const RadioGroup: FC<RadioGroupProps> = props => {
-  const { value, onChange, children } = props;
+  const { value, onChange, children, ...rest } = props;
   const [checked, setChecked] = useState<typeof value>(value);
   const [randomName] = useState(randomString(8));
 
   useEffect(() => {
     onChange && onChange(checked);
+    // eslint-disable-next-line
   }, [checked]);
 
   return (
-    <div className="za-radio-group">
+    <div className="za-radio-group" {...rest}>
       {React.Children.map(children, (child: any) => {
         return React.cloneElement(child, {
           onChecked: (val: typeof value) => setChecked(val),

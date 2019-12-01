@@ -1,9 +1,10 @@
 import React from "react";
 import { renderRoutes } from "../routes";
-import NavBar from "./components/nav-bar";
-import BgMap from "./components/bg-map/bg-map";
-import TitleBanner from "./components/title-banner";
+import NavBar from "./nav-bar";
+import BgMap from "./bg-map/bg-map";
+import TitleBanner from "./title-banner";
 import { withPositioned } from "@/mixins/Positioned";
+import { CommunityMarker } from "./bg-map";
 
 const PositionedNavBar = withPositioned(NavBar)({
   bottom: 30,
@@ -18,7 +19,11 @@ const PositionedTitleBanner = withPositioned(TitleBanner)({
 export default function Layout({ route }: any) {
   return (
     <>
-      <BgMap />
+      <BgMap>
+        {(map: any) => {
+          return <CommunityMarker map={map} />;
+        }}
+      </BgMap>
       <PositionedTitleBanner />
       <PositionedNavBar />
       {renderRoutes(route.routes)}

@@ -3,7 +3,7 @@ import { configure, addParameters, addDecorator } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { withA11y } from "@storybook/addon-a11y";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-import centered from "@storybook/addon-centered/react";
+// import centered from "@storybook/addon-centered/react";
 import { themes } from "@storybook/theming";
 import "@/global.scss";
 
@@ -30,11 +30,11 @@ addDecorator(
   })
 );
 addDecorator(withA11y);
-addDecorator(centered);
+// addDecorator(centered);
 addParameters({
   options: {
     isFullscreen: false,
-    showAddonsPanel: true,
+    showAddonsPanel: false,
     showSearchBox: true,
     panelPosition: "bottom",
     hierarchySeparator: /\./,

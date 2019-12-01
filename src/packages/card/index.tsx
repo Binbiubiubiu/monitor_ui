@@ -1,7 +1,9 @@
 import Card, { CardProps as ICardProps } from "./card";
-import { CardGroupProps as ICardGroupProps } from "./card-group";
+import { InlineCardProps as IInlineCardProps } from "./inline-card";
 
 export type NumberCardProps = ICardProps;
-export type CardGroupProps = ICardGroupProps;
+export type InlineCardProps = IInlineCardProps;
+
+export { InlineCard } from "./inline-card";
 
 export default Card;

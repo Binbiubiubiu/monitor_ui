@@ -1,10 +1,10 @@
 import React, { FC, ReactNode, MouseEventHandler } from "react";
 import classnames from "classnames";
-import "./style";
+import "./style/dialog.scss";
 import Icon from "../icon";
 
 const defaultProps = {
-  theme: "dark"
+  theme: "dark" as "dark" | "light"
 };
 
 export interface DialogProps {
@@ -13,7 +13,7 @@ export interface DialogProps {
    *
    * @default "dark"
    */
-  theme?: string;
+  theme?: "dark" | "light";
   /**
    *  弹窗的图标
    */
@@ -21,13 +21,15 @@ export interface DialogProps {
   /**
    *  弹窗标题
    */
-  title: string;
+  title: string | ReactNode;
   /**
    *  弹窗顶部补充部分
    */
   headerExpandRender?: () => ReactNode;
   /** 弹窗关闭回调 */
   onClose?: MouseEventHandler<Element>;
+  /** 弹窗最小化回调 */
+  onMinimize?: MouseEventHandler<Element>;
   [props: string]: any;
 }
 
@@ -37,34 +39,43 @@ export const Dialog: FC<DialogProps> = props => {
     titleIcon,
     title,
     onClose,
+    onMinimize,
     headerExpandRender,
-    style,
     className,
-    children
+    children,
+    ...rest
   } = props;
   // (titleIcon as { path: "" }).path = "";
 
   return (
     <section
       className={classnames(`za-dialog__theme-${theme}`, className)}
-      style={style}
+      {...rest}
     >
       <div className="za-dialog__header">
-        <span className="za-dialog__title">
-          {titleIcon && titleIcon}
-          {title}
-        </span>
+        {titleIcon && titleIcon}
+        <span className="za-dialog__title">{title}</span>
         <div className="za-dialog__expand">
           {headerExpandRender && headerExpandRender()}
         </div>
-        <Icon
-          path="assets/za-dialog/close-icon.png"
-          width="18"
-          height="18"
-          onClick={onClose}
-        />
+        {onClose && (
+          <Icon
+            path="/assets/dialog/close-icon.png"
+            width="18"
+            height="18"
+            onClick={onClose}
+          />
+        )}
+        {onMinimize && (
+          <Icon
+            path="/assets/dialog/minimize-icon.png"
+            width="18"
+            height="18"
+            onClick={onMinimize}
+          />
+        )}
       </div>
-      {children}
+      <div className="za-dialog__content">{children}</div>
     </section>
   );
 };

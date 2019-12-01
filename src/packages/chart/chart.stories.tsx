@@ -43,7 +43,7 @@ export const 折线图 = () => {
       yaxis={[[200, 189, 120, 165, 145, 209, 192]]}
       style={{
         width: `${px2rem(400)}rem`,
-        height: `${px2rem(240)}rem`
+        height: `${px2rem(190)}rem`
       }}
     />
   );
@@ -60,7 +60,7 @@ export const 双线折线图 = () => {
       tags={["第一类型", "第二类型"]}
       style={{
         width: `${px2rem(400)}rem`,
-        height: `${px2rem(240)}rem`
+        height: `${px2rem(190)}rem`
       }}
     />
   );
@@ -93,7 +93,7 @@ export const 雷达图 = () => {
     <RadarChart
       data={data}
       style={{
-        width: `${px2rem(416)}rem`,
+        width: `${px2rem(400)}rem`,
         height: `${px2rem(160)}rem`
       }}
     />

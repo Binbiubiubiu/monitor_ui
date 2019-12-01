@@ -1,4 +1,4 @@
-import React, { FC, MouseEventHandler } from "react";
+import React, { MouseEventHandler, Component } from "react";
 import classNames from "classnames";
 import "./style";
 
@@ -35,38 +35,40 @@ export interface ButtonProps {
   [prop: string]: any;
 }
 
-export const Button: FC<ButtonProps> = props => {
-  const {
-    up, // 左箭头
-    down, // 右箭头
-    actived, // 按钮激活
-    disabled, // 按钮禁用
-    onClick: handleClick, // 点击事件
-    children,
-    className,
-    ...rest
-  } = props;
+export class Button extends Component<ButtonProps> {
+  static defaultProps = defaultProps;
 
-  return (
-    <button
-      className={classNames(
-        "za-button",
-        {
-          "za-button__up": up,
-          "za-button__down": down,
-          "za-button__actived": actived
-        },
-        className
-      )}
-      disabled={disabled}
-      onClick={e => handleClick && !disabled && handleClick(e)}
-      {...rest}
-    >
-      {children}
-    </button>
-  );
-};
+  render() {
+    const {
+      up, // 左箭头
+      down, // 右箭头
+      actived, // 按钮激活
+      disabled, // 按钮禁用
+      onClick: handleClick, // 点击事件
+      children,
+      className,
+      ...rest
+    } = this.props;
 
-Button.defaultProps = defaultProps;
+    return (
+      <button
+        className={classNames(
+          "za-button",
+          {
+            "za-button__up": up,
+            "za-button__down": down,
+            "za-button__actived": actived
+          },
+          className
+        )}
+        disabled={disabled}
+        onClick={e => handleClick && !disabled && handleClick(e)}
+        {...rest}
+      >
+        {children}
+      </button>
+    );
+  }
+}
 
 export default Button;

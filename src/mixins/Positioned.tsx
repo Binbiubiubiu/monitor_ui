@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import { px2rem } from "@/utils/viewports";
 
-export interface Positioned {
+export interface PositionedProps {
   /** 左边距离 设计稿尺寸 */
   left?: string | number;
   /** 右边距离 设计稿尺寸 */
@@ -22,9 +22,9 @@ export interface Positioned {
 }
 
 export const withPositioned = (WrappedComponent: React.ElementType) => (
-  position: Positioned
+  position: PositionedProps
 ) => {
-  const hocComponent: FC<Positioned> = props => {
+  const hocComponent: FC<PositionedProps> = props => {
     const { style, ...rest } = props;
 
     return (
@@ -38,7 +38,7 @@ export const withPositioned = (WrappedComponent: React.ElementType) => (
   return hocComponent;
 };
 
-export const Positioned: FC<Positioned> = props => {
+export const Positioned: FC<PositionedProps> = props => {
   const { children, style, ...rest } = props;
 
   return (
@@ -50,8 +50,8 @@ export const Positioned: FC<Positioned> = props => {
   );
 };
 
-export const usePositioned = (initPosition: Positioned) => {
-  const [position, setPosition] = useState<Positioned>(initPosition);
+export const usePositioned = (initPosition: PositionedProps) => {
+  const [position, setPosition] = useState<PositionedProps>(initPosition);
   const computedStyle = useMemo<CSSProperties>(
     () => getComputedStyle(position),
     [position]
@@ -59,10 +59,10 @@ export const usePositioned = (initPosition: Positioned) => {
   return [computedStyle, setPosition];
 };
 
-const getComputedStyle = (position: Positioned) => {
+const getComputedStyle = (position: PositionedProps) => {
   // 单位转换
   const { middle, ...rest } = position;
-  const computdPosition: Positioned = {};
+  const computdPosition: PositionedProps = {};
   for (let key in rest) {
     computdPosition[key] = `${px2rem(position[key])}rem`;
   }

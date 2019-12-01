@@ -1,5 +1,5 @@
 $designWidth : 1920;
 
 @function px2rem($px) {
-    @return $px/$designWidth*10+rem;
+    @return floor($px/$designWidth*10*1000)/1000+rem;
 }

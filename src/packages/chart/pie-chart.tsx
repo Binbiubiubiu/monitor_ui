@@ -1,8 +1,6 @@
 import React, { Component, createRef } from "react";
 import echarts, { ECharts, EChartOption } from "@/lib/echarts";
 
-const defaultProps = {};
-
 export interface PieChartProps {
   /**
    * 数据
@@ -12,8 +10,6 @@ export interface PieChartProps {
 }
 
 export class PieChart extends Component<PieChartProps> {
-  static defaultProps = defaultProps;
-
   chartRef: React.RefObject<HTMLDivElement>;
   chart?: ECharts;
 

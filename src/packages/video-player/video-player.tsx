@@ -91,6 +91,7 @@ class VideoPlayer extends Component<VideoPlayerProps, VideoPlayerState> {
     if (this.player) {
       this.player.off("error", this.addVideoPlayerErrorListener);
       this.player.dispose();
+      this.player = null;
     }
   }
 

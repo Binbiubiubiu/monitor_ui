@@ -1,0 +1,25 @@
+ /***************** 小区点代码 start ********************/
+
+ .custom-house-marker {
+     position        : relative;
+     padding         : 4px 8px;
+     background-color: #07265d;
+     border-radius   : 20px;
+     border          : solid 1px #2ac1da;
+     white-space     : nowrap;
+     font-size       : 14px;
+     color           : #fff;
+
+     &::before {
+         content     : '';
+         position    : absolute;
+         top         : -4px;
+         left        : -30px;
+         width       : 24px;
+         height      : 30px;
+         margin-right: 6px;
+         background  : url('/assets/map-markers/community-marker.png') no-repeat center center /100%;
+     }
+ }
+
+ /***************** 小区点代码 end ********************/

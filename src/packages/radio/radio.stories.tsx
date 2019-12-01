@@ -3,7 +3,7 @@ import { Radio, RadioButton } from ".";
 import Icon from "../icon";
 
 export default {
-  title: "公共组件| 单选"
+  title: "公共组件|单选"
 };
 
 export const 默认 = () => (

@@ -1,7 +1,5 @@
 import React, { FC, ReactNode, isValidElement } from "react";
-import "./style";
-import CardGroup from "./card-group";
-import { CardGroupProps } from "./card-group";
+import "./style/card.scss";
 
 const defaultProps = {};
 
@@ -12,9 +10,10 @@ export interface CardProps {
   title: string | ReactNode;
   /** 卡片数字 */
   number: string | ReactNode;
+  [props: string]: any;
 }
 
-export const Card: FC<CardProps> & { Group: FC<CardGroupProps> } = props => {
+export const Card: FC<CardProps> = props => {
   const { icon, title, number, ...rest } = props;
   return (
     <div className="za-card" {...rest}>
@@ -34,7 +33,5 @@ export const Card: FC<CardProps> & { Group: FC<CardGroupProps> } = props => {
 };
 
 Card.defaultProps = defaultProps;
-
-Card.Group = CardGroup;
 
 export default Card;

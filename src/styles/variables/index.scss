@@ -1,6 +1,6 @@
 @import "./colors.scss";
 
-$prefixCls: 'za-';
+$prefixCls: "za-";
 
 $blank-space-normal: px2rem(8);
 $blank-space-big   : px2rem(10);
@@ -13,6 +13,7 @@ $text-normal-size: px2rem(14);
 
 /*****************  number-card  ******************/
 $number-card-text-color: #d4f9ff;
+$inline-card-text-color: #74faff;
 
 /*****************  button  ******************/
 $za-btn-text-color : #ffffff;
@@ -30,9 +31,10 @@ $dialog-background-2: rgba(19, 47, 97, 0.7);
 $dialog-border-2    : 1px solid #1f4cc4;
 
 /*****************  select  ******************/
-$custom-select-text-color: #1b57bf;
-$custom-select-bg        : #fff;
-$custom-select-border    : 1px solid #0059ff;
+$za-select-text-color     : #1b57bf;
+$za-select-bg             : #fff;
+$za-select-border         : 1px solid #0059ff;
+$za-select-dropdown-border: 1px solid #777;
 
 /*****************  tags  ******************/
 $za-tag-primary-bg : #3866d3;

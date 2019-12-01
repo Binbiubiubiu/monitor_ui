@@ -1,21 +1,27 @@
 .#{$prefixCls}card {
-    display         : inline-flex;
-    align-items     : center;
-    min-width       : px2rem(234);
-    padding         : px2rem(20);
-    background-color: $dialog-background-1;
-    color           : $number-card-text-color;
-    border-bottom   : 1px solid $dialog-title-color;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-width: px2rem(234);
+  padding: px2rem(16) px2rem(24) px2rem(12);
+  background-color: $dialog-background-1;
+  color: $number-card-text-color;
+  border-bottom: 1px solid $dialog-title-color;
 
-    .#{$prefixCls}card__content {
-        margin-left: px2rem(20);
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 
-    .#{$prefixCls}card__title {
-        font-size: $text-normal-size;
-    }
+  .#{$prefixCls}card__content {
+    margin-left: px2rem(20);
+  }
 
-    .#{$prefixCls}card__number {
-        font-size: px2rem(48);
-    }
+  .#{$prefixCls}card__title {
+    font-size: $text-normal-size;
+  }
+
+  .#{$prefixCls}card__number {
+    font-size: px2rem(48);
+    line-height: 1;
+  }
 }

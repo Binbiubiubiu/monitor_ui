@@ -1,8 +1,5 @@
 import React, { Component, createRef } from "react";
 import echarts, { ECharts, EChartOption } from "@/lib/echarts";
-import { shallowMerge } from "@/utils/data";
-
-const defaultProps = {};
 
 export interface LineChartProps {
   /**
@@ -39,7 +36,7 @@ export class LineChart extends Component<LineChartProps> {
   }
 
   render() {
-    const { ...rest } = shallowMerge(defaultProps, this.props);
+    const { ...rest } = this.props;
 
     return <div ref={this.chartRef} {...rest}></div>;
   }

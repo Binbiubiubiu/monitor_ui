@@ -1,8 +1,5 @@
 import React, { Component, createRef } from "react";
 import echarts, { ECharts, EChartOption } from "@/lib/echarts";
-import { shallowMerge } from "@/utils/data";
-
-const defaultProps = {};
 
 export interface RadarChartProps {
   /**
@@ -31,9 +28,9 @@ export class RadarChart extends Component<RadarChartProps> {
   }
 
   render() {
-    const { ...rest } = shallowMerge(defaultProps, this.props);
+    const { style } = this.props;
 
-    return <div ref={this.chartRef} {...rest}></div>;
+    return <div ref={this.chartRef} style={style}></div>;
   }
 }
 
@@ -100,12 +97,12 @@ const getOptions: (data: any) => EChartOption = data => {
 
   return {
     tooltip: {
-      show: true,
+      show: false,
       trigger: "item"
     },
     radar: {
       center: ["50%", "50%"],
-      radius: "75%",
+      radius: "65%",
       startAngle: 90, // 起始角度
       splitNumber: 4,
       shape: "circle",
@@ -117,7 +114,7 @@ const getOptions: (data: any) => EChartOption = data => {
       name: {
         textStyle: {
           color: "#fff",
-          fontSize: 10
+          fontSize: 12
         }
       },
       nameGap: 6,
